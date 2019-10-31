@@ -60,4 +60,5 @@ weekly supervised data. You can use the same reference model we used, which is [
        This will take several hours.
 1. Start training by going to ```panorama/examples``` and executing ```run.sh```. The hyperparameters are tunned for this specific example. Depending on your hardware, the training can take up to several days. (~ 2d on a single GTX 1080Ti). This script will also look at your trainning data and generate a config file named ```faces.json```, which we will need later.
 1. Once the training is done. We now move on to the next step of configuring the cascade, as described in the paper. The script to do this is ```panorama/example/model_qualification.sh```.
+1. For recognition usage, you need a labeled dataset (you can use the one generated above) to poll an album. Change the paths in ```panorama/examples/recognition_ytf.py``` and run it.
 1. Panorama is now ready for deploying. Please check ```examples/examples.ipynb``` for, well, examples.
