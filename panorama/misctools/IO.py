@@ -1,30 +1,16 @@
-# import cv2
+# Copyright 2019 Yuhao Zhang
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#    http://www.apache.org/licenses/LICENSE-2.0
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import os
 import dill
-# import xml.etree.ElementTree as ET
-
-
-# class ImagePreprocessed(object):
-#     def __init__(self, model_name):
-#         if model_name == 'yoloembeddingnet':
-#             self.image = cv2.imread(dir)
-#             image = cv2.imread(dir)
-#             input_image = cv2.resize(image, (416, 416))
-#             input_image = input_image / 255.
-#             input_image = input_image[:, :, ::-1]
-#             input_image = np.expand_dims(input_image, 0)
-#         else:
-#             raise NotImplementedError(
-#                 "No model other than 'yoloembeddingnet' supported so far")
-#         self.__name = os.path.splitext(os.path.basename(img_name))[0]
-
-#     def __str__(self):
-#         return self.__name
-
-# class BaseBoundingBoxDrawer(object):
-#     def __init__(self):
-#          raise NotImplementedError("Implemented in subclasses")
-#     def draw(self,image):
 
 
 def load_obj(dir='.', name=None):
@@ -41,4 +27,3 @@ def save_obj(obj, name, dir='.'):
     with open(os.path.join(dir, name + '.pkl'), 'wb+') as f:
         print os.path.join(dir, name + '.pkl')
         dill.dump(obj, f, dill.HIGHEST_PROTOCOL)
-
