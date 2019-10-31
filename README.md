@@ -30,7 +30,8 @@ Panorama will then start to detect faces and you can see the video feed with bou
 3. Click the box and the program will prompt you for label. Input the label and press enter. Repeate to label other objects on the image window. Once finished press ```c``` to exit annotation mode.
 4. The video will resume playing. Panorama's vocabulary is now enlarged to recognize the people's identities. No CNN retraining happened during this process.
 5. Press ```q``` to quit.
-![](/panorama/examples/panorama_optimized.gif?raw=true)
+
+[![Click for full video](/panorama/examples/panorama_optimized.gif?raw=true)](https://youtu.be/KHoOa-ilaRE)
 
 # End-to-end example with faces
 This is an example of training and deploying Panorama on face recognition tasks, as described in our paper.
