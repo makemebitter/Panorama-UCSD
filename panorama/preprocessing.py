@@ -1,3 +1,4 @@
+# This file is adopted from https://github.com/experiencor/keras-yolo2
 from __future__ import division
 from __future__ import print_function
 from __future__ import absolute_import
@@ -9,7 +10,6 @@ from imgaug import augmenters as iaa
 from keras.utils import Sequence
 import xml.etree.ElementTree as ET
 from panorama.utils import BoundBox, bbox_iou
-
 
 
 def parse_annotation(ann_dir, img_dir, labels=[], onlyInLabels=True):

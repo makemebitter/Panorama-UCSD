@@ -7,8 +7,8 @@ from collections import defaultdict
 from scipy.spatial import distance_matrix
 from copy import deepcopy
 import pandas as pd
-from panorama.yoloembeddingnet.yoloembeddingnet import VerificationBase
-from panorama.yoloembeddingnet.yoloembeddingnet import MQ_SCHEMA
+from panorama.net.net import VerificationBase
+from panorama.net.net import MQ_SCHEMA
 
 
 class ModelQualifier(VerificationBase):

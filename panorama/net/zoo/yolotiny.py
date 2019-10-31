@@ -1,3 +1,14 @@
+# Copyright 2019 Yuhao Zhang
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#    http://www.apache.org/licenses/LICENSE-2.0
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 from __future__ import absolute_import
 from __future__ import print_function
 from __future__ import division
@@ -65,7 +76,7 @@ def generate_output_layer(GRID_H,
     output = Lambda(lambda args: args[0])([output, true_boxes])
     return output
 
-
+# the function to implement the CNN (thanks to https://github.com/experiencor/keras-yolo2)
 def yolo_tiny_cascade(GRID_H, GRID_W, BOX, CLASS, input_image_shape, true_boxes_shape, input_tensor=None):
     if input_tensor is not None:
         input_image = Input(tensor=input_tensor, shape=input_image_shape)
@@ -137,7 +148,7 @@ def yolo_tiny_cascade(GRID_H, GRID_W, BOX, CLASS, input_image_shape, true_boxes_
     # model.summary()
     return model, input_image, true_boxes
 
-
+# the function to implement the YOLOv2 loss (thanks to https://github.com/experiencor/keras-yolo2)
 def custom_loss_deco(GRID_H, GRID_W, BATCH_SIZE, ANCHORS, BOX, COORD_SCALE, NO_OBJECT_SCALE, OBJECT_SCALE, CLASS_WEIGHTS, CLASS_SCALE, WARM_UP_BATCHES, true_boxes):
     def custom_loss(y_true, y_pred):
         mask_shape = tf.shape(y_true)[:4]
